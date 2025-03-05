@@ -1,0 +1,545 @@
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #2d3436;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+/* Advanced Color Scheme */
+:root {
+    --primary-color: #3a86ff;
+    --secondary-color: #8338ec;
+    --accent-color: #ff006e;
+    --background-color: #f5f6fa;
+    --text-color: #2d3436;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background 0.3s ease-in-out;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#about {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 4rem 0;
+    transition: transform 0.3s ease;
+}
+
+#about:hover {
+    transform: scale(1.02);
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#services {
+    background: #fff;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    padding: 2rem;
+    background: linear-gradient(145deg, #e0e0e0, #ffffff);
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact Section */
+#contact {
+    background: var(--background-color);
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(58, 134, 255, 0.2);
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background 0.4s ease;
+}
+
+form button:hover {
+    background: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+#about, .service, form, footer {
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+    
+    #services .service {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+/* Navbar Styling */
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #f9f9f9;
+    margin: 2rem 0;
+}
+
+#testimonials {
+    background: #eaf4ff;
+    padding: 4rem 2rem;
+}
+
+.testimonial {
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Navigation Hover Animation */
+.nav-links a {
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+    transform: scale(1.1);
+}
+
+/* Button Styling */
+button {
+    background: #3a86ff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #8338ec;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: var(--secondary-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown Button Arrow */
+.arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 5px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* Product Section */
+#seafood-products {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#seafood-products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0077b6;
+}
+
+#seafood-products p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #0077b6;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-card span {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.product-card button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #005f8f;
+}
+
+/* Hover Effects */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.cen{
+    align-content: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Username Styling in Navbar */
+#user-display {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffcc00; /* Gold Accent for Visibility */
+    margin-left: 15px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2); /* Slight White Transparency */
+    border-radius: 8px;
+}
+/* Responsive Navbar Adjustments */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #user-display {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

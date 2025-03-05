@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="#about" class="logo">
+                <img src="./assets/bus.png" alt="Business Logo">
+            </a>
+            <!-- Navigation Links -->
+             <p class="cen">Our Aim is to Make Sure Our Clients Have The Best Experience!!
+                <nav class="nav-links" id="nav-links">
+                    <!-- Dropdown Menu for Services -->
+                    <div class="dropdown">
+                        <button class="dropbtn"> 
+                            <i class="arrow down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#service1"> <a href="./index.html">About Us</a></a>
+                            <!--<a href="#service2"><a href="#testimonials">Testimonials</a></a>-->
+                            <a href="#service3"> <a href="./services.html">services</a></a>
+                            <a href="#service3"> <a href="./contact.html">Contact</a></a>
+                        </div>
+                    </div>
+                </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Business Name. All rights reserved.</p>
+    </footer>
+    <script src="contact.js"></script>
+</body>
+</html>
